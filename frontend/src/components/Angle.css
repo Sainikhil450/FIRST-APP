@@ -1,0 +1,131 @@
+
+/* ParrotFish.css */
+.fish-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .fish-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title text */
+  }
+  
+  .fish-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows */
+    flex-grow: 1; /* Allow items to grow and fill the available space */
+  }
+  
+  .fish-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .fish-image-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  .fish-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .fish-details {
+    flex-grow: 1;
+  }
+  
+  .fish-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .fish-description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .fish-price {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .fish-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .buy-now-button, .add-to-cart-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buy-now-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .add-to-cart-button {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .buy-now-button:hover, .add-to-cart-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Style for the Back to Home button */
+  .back-home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px; /* Space above the button */
+    align-self: center; /* Center horizontally in flex container */
+    margin-bottom: 20px; /* Space below the button */
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .quantity-controls button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .quantity-controls button:hover {
+    background-color: #ddd;
+  }
+  
+  .quantity-controls span {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
