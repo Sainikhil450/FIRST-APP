@@ -1,19 +1,20 @@
 const express = require("express");
 const mysql = require('mysql');
 const cors = require('cors');
+require('dotenv').config(); // Ensure you have dotenv installed and required
 
 // Create an Express application
 const app = express();
 app.use(cors());
 app.use(express.json()); // Add this line to parse JSON bodies
 
-// Create a connection to the database
+// Create a connection to the database using environment variables
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "", // Use your actual password if needed
-    database: "signup",
-    port: 3306 // Ensure this matches your MySQL server port
+    host: process.env.DB_HOST || "localhost",
+    user: process.env.DB_USER || "root",
+    password: process.env.DB_PASSWORD || "",
+    database: process.env.DB_NAME || "signup",
+    port: process.env.DB_PORT || 3306 // Default to 3306 if not specified
 });
 
 // Connect to the database
