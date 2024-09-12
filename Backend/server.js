@@ -14,9 +14,7 @@ const db = mysql.createConnection({
     user: process.env.DB_USER ,
     password: process.env.DB_PASSWORD ,
     database: process.env.DB_NAME ,
-    waitForConnections:true,
-    connectionLimit:5,
-    queuelLimit:0
+    port: process.env.DB_PORT  // Default to 3306 if not specified
 });
 
 // Connect to the database
