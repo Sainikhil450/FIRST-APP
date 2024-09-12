@@ -10,11 +10,11 @@ app.use(express.json()); // Add this line to parse JSON bodies
 
 // Create a connection to the database using environment variables
 const db = mysql.createConnection({
-    host: process.env.DB_HOST ,
-    user: process.env.DB_USER ,
-    password: process.env.DB_PASSWORD ,
-    database: process.env.DB_NAME ,
-    port: process.env.DB_PORT  // Default to 3306 if not specified
+    host: process.env.DB_HOST || "bj2inmlygfrrvyzq2uxq-mysql.services.clever-cloud.com",
+    user: process.env.DB_USER || "ume0mna9rysq1zvc",
+    password: process.env.DB_PASSWORD || "9MjV5Kob0zeEbVN2CcY1",
+    database: process.env.DB_NAME || "bj2inmlygfrrvyzq2uxq",
+    port: process.env.DB_PORT || 3306 // Default to 3306 if not specified
 });
 
 // Connect to the database
