@@ -10,11 +10,13 @@ app.use(express.json()); // Add this line to parse JSON bodies
 
 // Create a connection to the database using environment variables
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || "localhost",
-    user: process.env.DB_USER || "root",
-    password: process.env.DB_PASSWORD || "",
-    database: process.env.DB_NAME || "signup",
-    port: process.env.DB_PORT || 3306 // Default to 3306 if not specified
+    host: process.env.DB_HOST ,
+    user: process.env.DB_USER ,
+    password: process.env.DB_PASSWORD ,
+    database: process.env.DB_NAME ,
+    waitForConnections:true,
+    connectionLimit:5,
+    queuelLimit:0
 });
 
 // Connect to the database
